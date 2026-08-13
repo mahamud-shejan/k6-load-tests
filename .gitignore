@@ -1,0 +1,11 @@
+# Real credentials — never commit
+.env
+.env.*
+!.env.example
+
+# k6 result exports
+*.json.gz
+summary.json
+results/
+node_modules/
+.claude/settings.local.json

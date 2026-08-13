@@ -1,0 +1,17 @@
+{
+  "name": "k6-script",
+  "version": "1.0.0",
+  "description": "k6 GET load / stress test suite for tf.cloudly.io",
+  "main": "specs/getapi.js",
+  "scripts": {
+    "validate": "for f in tests/*.test.js; do echo \"== $f\"; k6 inspect \"$f\" >/dev/null && echo OK; done",
+    "test:home": "bash run.sh tests/home.test.js",
+    "test:ops": "bash run.sh tests/ops.test.js",
+    "test:employer": "bash run.sh tests/employer.test.js",
+    "test:worker": "bash run.sh tests/worker.test.js",
+    "case": "bash run.sh",
+    "smoke": "k6 inspect specs/getapi.js"
+  },
+  "author": "Shejan",
+  "license": "ISC"
+}
